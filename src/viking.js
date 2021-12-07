@@ -69,11 +69,18 @@ addSaxon(Saxon){
 vikingAttack(){
   let randomSaxon = this.saxonArmy[Math.floor(Math.random()* this.saxonArmy.length)];
   let randomViking = this.vikingArmy[Math.floor(Math.random()* this.vikingArmy.length)];
-  console.log(randomSaxon);
+  let result = randomSaxon.receiveDamage(randomViking.strength)
+  // if (randomSaxon.health <= 0) {
+    
+  // }
+  return result
+
 }
 saxonAttack(){
   let randomSaxon = this.saxonArmy[Math.floor(Math.random()* this.saxonArmy.length)];
   let randomViking = this.vikingArmy[Math.floor(Math.random()* this.vikingArmy.length)];
+  let result = randomViking.receiveDamage(randomSaxon.strength)
+  return result
 }
 showStatus(){}
 
